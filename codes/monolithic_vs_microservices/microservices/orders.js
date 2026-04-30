@@ -3,9 +3,11 @@ import cors from 'cors';
 
 const app = express();
 app.use(cors());
+app.use(express.json());
 
 app.post('/orders', (req, res) => {
     console.log("Received request for /orders");
+    console.log("Request body:", req.body);
     res.send("orders");
 });
 
