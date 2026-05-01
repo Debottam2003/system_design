@@ -12,5 +12,5 @@ app.post('/payments', (req, res) => {
 });
 
 app.listen(3334, () => {
-    console.log('Users service is running on port 3334');
+    console.log('Payments service is running on port 3334');
 });

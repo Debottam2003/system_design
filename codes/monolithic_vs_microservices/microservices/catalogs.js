@@ -10,5 +10,5 @@ app.get('/catalogs', (req, res) => {
 });
 
 app.listen(3333, () => {
-    console.log('Users service is running on port 3333');
+    console.log('Catalogs service is running on port 3333');
 });
