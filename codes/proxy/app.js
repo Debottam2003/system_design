@@ -154,13 +154,41 @@ async function handleRequest(req, res, url) {
 
 app.use(async (req, res) => {
   if (req.url.startsWith("/catalogs")) {
-    await handleRequest(req, res, "/catalogs");
+    try {
+      await handleRequest(req, res, "/catalogs");
+    } catch (error) {
+      console.error("Error handling /catalogs request:", error);
+      res.set("Content-Type", "text/html");
+      res.status(500);
+      res.send("Internal Server Error");
+    }
   } else if (req.url.startsWith("/users")) {
-    await handleRequest(req, res, "/users");
+    try {
+      await handleRequest(req, res, "/users");
+    } catch (error) {
+      console.error("Error handling /users request:", error);
+      res.set("Content-Type", "text/html");
+      res.status(500);
+      res.send("Internal Server Error");
+    }
   } else if (req.url.startsWith("/orders")) {
-    await handleRequest(req, res, "/orders");
+    try {
+      await handleRequest(req, res, "/orders");
+    } catch (error) {
+      console.error("Error handling /orders request:", error);
+      res.set("Content-Type", "text/html");
+      res.status(500);
+      res.send("Internal Server Error");
+    }
   } else if (req.url.startsWith("/payments")) {
-    await handleRequest(req, res, "/payments");
+    try {
+      await handleRequest(req, res, "/payments");
+    } catch (error) {
+      console.error("Error handling /payments request:", error);
+      res.set("Content-Type", "text/html");
+      res.status(500);
+      res.send("Internal Server Error");
+    }
   } else {
     res.set("Content-Type", "text/html");
     res.status(404);
