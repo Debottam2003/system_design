@@ -1,4 +1,3 @@
-
 # System Design
 
 A comprehensive collection of system design concepts, patterns, and best practices.
@@ -20,5 +19,3 @@ Review folder to understand core concepts and patterns.
 ## 🤝 Contributing
 
 Contributions are welcome.
-
-
