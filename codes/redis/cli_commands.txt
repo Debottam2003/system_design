@@ -1,0 +1,39 @@
+PING
+-> PONG
+
+Key-Value pairs
+---------------
+SET key value
+->SET name debottam
+GET key
+->GET name
+
+Lists
+-----
+LPUSH key elements [elements...]
+->LPUSH arr 10 20 30
+RPUSH key elements [elements...]
+->RPUSH arr 50 60 70
+LRANGE key start stop
+->LRANGE arr 0 -1
+LLEN key
+->LLEN arr
+
+Objects
+-------
+HSET key feature value [featue value...]
+->HSET user:2003 name debottam age 23
+HGET key feature
+->HGET user:2003 name
+HGETALL key
+->HGETALL user:2003
+
+TTL(Time To Live)
+-----------------
+SET key value EX seconds | PX milliseconds
+->SET name debottam EX 100
+
+In Redis, the TTL command returns:
+-2 → the key does not exist
+-1 → the key exists but has no expiration
+>= 0 → remaining time to live in seconds

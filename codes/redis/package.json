@@ -1,12 +1,16 @@
 {
   "name": "redis",
-  "module": "index.ts",
-  "type": "module",
-  "private": true,
-  "devDependencies": {
-    "@types/bun": "latest"
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "peerDependencies": {
-    "typescript": "^5"
+  "keywords": [],
+  "author": "Debottam Kar",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "redis": "^5.9.0"
   }
 }
